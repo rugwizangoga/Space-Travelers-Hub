@@ -22,7 +22,6 @@ const MissionsList = () => {
   const missions = useSelector(selectAllMissions);
   return (
     <div>
-      <hr />
       <table className="mission-table">
         <thead>
           <tr>

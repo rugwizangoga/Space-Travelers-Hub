@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
 import { selectAllMissions } from '../../redux/missions/missionsSlice';
-import './Profile.css';
 
 const MissionItem = ({ missionName }) => <li>{missionName}</li>;
 MissionItem.propTypes = {
@@ -11,8 +10,10 @@ MissionItem.propTypes = {
 const Profile = () => {
   const missions = useSelector(selectAllMissions);
   const joinedMissions = missions.filter((mission) => mission.joined === true);
+  const rocketsList = useSelector((state) => state.rockets.rockets);
+  const reservedRockets = rocketsList.filter((rocket) => rocket.reserved);
   return (
-    <>
+    <div className="profile-container">
       <section>
         <h2>My Missions</h2>
         <ul className="missionsList">
@@ -24,7 +25,18 @@ const Profile = () => {
           ))}
         </ul>
       </section>
-    </>
+      <section>
+        <h2>My Rockets</h2>
+        <ul className="missionsList">
+          {reservedRockets.map((rocket) => (
+            <MissionItem
+              key={rocket.id}
+              missionName={rocket.name}
+            />
+          ))}
+        </ul>
+      </section>
+    </div>
   );
 };
 
