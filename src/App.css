@@ -48,10 +48,6 @@ nav {
   padding: 0 24px;
 }
 
-.navLinks li:nth-child(2) {
-  border-right: 2px solid black;
-}
-
 .rocket-container {
   width: 95%;
   display: flex;
@@ -202,11 +198,16 @@ ul {
   padding: 10px;
 }
 
+.navLinks li:nth-child(2) {
+  border-right: 2px solid black;
+}
+
 .missionsList li:last-child {
   border-bottom: 1px solid #4f5253;
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
 }
+
 .missionsList li:first-child {
   border-top-right-radius: 3px;
   border-top-left-radius: 3px;
