@@ -1,10 +1,4 @@
-/* eslint-disable camelcase */
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-
-const initialState = {
-  contents: [],
-  status: 'idle',
-};
 
 export const fetchMissions = createAsyncThunk(
   'missions/fetchMissions',
@@ -14,14 +8,37 @@ export const fetchMissions = createAsyncThunk(
   },
 );
 
+const initialState = {
+  contents: [],
+  status: 'idle',
+};
+
 const missionsSlice = createSlice({
   name: 'missions',
   initialState,
   reducers: {
-    // eslint-disable-next-line
-    joinMission: () => console.log("join mission"),
-    // eslint-disable-next-line
-    leaveMission: () => console.log("leave mission"),
+    joinMission: (state, action) => {
+      const id = action.payload;
+
+      const newContents = state.contents.map((mission) => {
+        if (mission.mission_id !== id) return mission;
+
+        return { ...mission, joined: true };
+      });
+
+      return { ...state, contents: newContents };
+    },
+    leaveMission: (state, action) => {
+      const id = action.payload;
+
+      const newContents = state.contents.map((mission) => {
+        if (mission.mission_id !== id) return mission;
+
+        return { ...mission, joined: false };
+      });
+
+      return { ...state, contents: newContents };
+    },
   },
 
   extraReducers: (builder) => {
@@ -35,18 +52,20 @@ const missionsSlice = createSlice({
 
         const missionsList = [];
         data.forEach((element) => {
-          const { mission_id, mission_name, description } = element;
-          missionsList.push({
-            mission_id,
-            mission_name,
-            description,
-          });
+          // const { mission_id, mission_name, description } = element;
+          // missionsList.push({
+          //   mission_id,
+          //   mission_name,
+          //   description,
+          //   joined: false,
+          // });
+          missionsList.push({ ...element, joined: false });
         });
-        return { ...state, contents: missionsList };
+        return { ...state, contents: missionsList, status: 'idle' };
       });
   },
 });
-
+export const { joinMission, leaveMission } = missionsSlice.actions;
 export const selectAllMissions = (state) => state.missions.contents;
 export const selectState = (state) => state.missions.status;
 
