@@ -10,7 +10,7 @@ const Button = ({ isJoined, missionId }) => {
   if (isJoined) {
     return (
       <button
-        className="btn failure__button"
+        className="btnm failure__button"
         type="button"
         onClick={() => dispatch(leaveMission(missionId))}
       >
@@ -20,7 +20,7 @@ const Button = ({ isJoined, missionId }) => {
   }
   return (
     <button
-      className=" btn success__button"
+      className=" btnm success__button"
       type="button"
       onClick={() => dispatch(joinMission(missionId))}
     >
