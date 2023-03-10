@@ -1,7 +1,44 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import Mission from '../Mission';
 
-const Missions = () => (
-  <div>Missions</div>
-);
+import {
+  fetchMissions,
+  selectAllMissions,
+  selectState,
+} from '../../redux/missions/missionsSlice';
 
-export default Missions;
+const MissionsList = () => {
+  const dispatch = useDispatch();
+  const status = useSelector(selectState);
+  const contents = useSelector((state) => state.missions.contents);
+
+  useEffect(() => {
+    if (contents.length === 0 && status === 'idle') {
+      dispatch(fetchMissions());
+    }
+  }, [dispatch, status, contents.length]);
+
+  const missions = useSelector(selectAllMissions);
+  return (
+    <div>
+      <hr />
+      <table className="mission-table">
+        <thead>
+          <tr>
+            <th>Mission</th>
+            <th>Description</th>
+            <th>Status</th>
+            <th>&nbsp;</th>
+          </tr>
+        </thead>
+        <tbody>
+          {missions.map((mission) => (
+            <Mission key={mission.mission_id} mission={mission} />
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+};
+export default MissionsList;
