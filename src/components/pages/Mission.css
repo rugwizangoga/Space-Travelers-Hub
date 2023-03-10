@@ -1,0 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
+.btn {
+  padding: 8px 15px;
+  background-color: rgb(49, 119, 248);
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+}

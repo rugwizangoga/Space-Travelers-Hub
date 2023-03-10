@@ -9,7 +9,7 @@ const Mission = (props) => {
     <div className="mission-list">
       <h1>{mission_name}</h1>
       <p>{description}</p>
-      <button type="button"> Join Mission</button>
+      <button type="button" className="btn"> Join Mission</button>
     </div>
   );
 };
