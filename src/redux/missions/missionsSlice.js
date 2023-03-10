@@ -52,13 +52,6 @@ const missionsSlice = createSlice({
 
         const missionsList = [];
         data.forEach((element) => {
-          // const { mission_id, mission_name, description } = element;
-          // missionsList.push({
-          //   mission_id,
-          //   mission_name,
-          //   description,
-          //   joined: false,
-          // });
           missionsList.push({ ...element, joined: false });
         });
         return { ...state, contents: missionsList, status: 'idle' };
