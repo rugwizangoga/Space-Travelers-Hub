@@ -1,0 +1,15 @@
+.missionsList li {
+    border: 1px solid black;
+    padding: 10px;
+    list-style: none;
+    width: 50%;
+    margin-left: -3%;
+  }
+  
+  h2 {
+    margin-bottom: 12px;
+  }
+  
+  .myprofile__list {
+    border: 1px solid black;
+  }

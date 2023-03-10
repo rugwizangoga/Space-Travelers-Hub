@@ -21,24 +21,21 @@ const MissionsList = () => {
 
   const missions = useSelector(selectAllMissions);
   return (
-    <div>
-      <hr />
-      <table className="mission-table">
-        <thead>
-          <tr>
-            <th>Mission</th>
-            <th>Description</th>
-            <th>Status</th>
-            <th>&nbsp;</th>
-          </tr>
-        </thead>
-        <tbody>
-          {missions.map((mission) => (
-            <Mission key={mission.mission_id} mission={mission} />
-          ))}
-        </tbody>
-      </table>
-    </div>
+    <table className="mission-table">
+      <thead>
+        <tr>
+          <th>Mission</th>
+          <th>Description</th>
+          <th>Status</th>
+          <th>&nbsp;</th>
+        </tr>
+      </thead>
+      <tbody>
+        {missions.map((mission) => (
+          <Mission key={mission.mission_id} mission={mission} />
+        ))}
+      </tbody>
+    </table>
   );
 };
 export default MissionsList;
