@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 # 📖 Space Traverlers Hub <a name="about-project"></a>
 
-Space Traverlers Hub is a web app that works with the real live data from the SpaceX API. The app provides commercial and scientific space travel services. The app allows users to book rockets and join selected space missions.
+Space Traverlers Hub is a web app that works with the real live data from the SpaceX API. The app provides commercial and scientific space travel services. The app also allows users to book rockets and join selected space missions.
 
 
 # 📗 Table of Contents
@@ -33,7 +33,7 @@ Space Traverlers Hub is a web app that works with the real live data from the Sp
 - CSS
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 - [React](https://reactjs.org/)
-- [Redux_Toolkit] (https://redux-toolkit.js.org/)
+- [Redux Toolkit] (https://redux-toolkit.js.org/)
 <details>
   <summary>Server</summary>
   <ul>
