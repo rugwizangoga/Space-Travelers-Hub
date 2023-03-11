@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Missions component should render correctly 1`] = `
+<div
+  className="profile-container"
+>
+  <section>
+    <h2>
+      My Missions
+    </h2>
+    <ul
+      className="missionsList"
+    />
+  </section>
+  <section>
+    <h2>
+      My Rockets
+    </h2>
+    <ul
+      className="missionsList"
+    />
+  </section>
+</div>
+`;

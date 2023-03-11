@@ -1,0 +1,213 @@
+* {
+  text-decoration: none;
+  list-style: none;
+  font-family: serif;
+  font-size: 20px;
+}
+
+a {
+  color: #1e87ff;
+  font-size: 21px;
+}
+
+a.active {
+  text-decoration: underline;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1.5px solid #4f5253;
+}
+
+.app-logo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-left: 24px;
+}
+
+.app-name {
+  font-size: 25px;
+}
+
+.logo {
+  width: 34px;
+  height: 30px;
+}
+
+.navLinks {
+  display: flex;
+  margin-right: 24px;
+}
+
+.navLinks li {
+  padding: 0 24px;
+}
+
+.rocket-container {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  margin: 30px auto;
+}
+
+.profile-container {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  margin: 30px auto;
+}
+
+.rocket {
+  display: flex;
+  gap: 30px;
+}
+
+.rocket-img {
+  width: 350px;
+  height: 250px;
+}
+
+.details {
+  width: 70%;
+}
+
+.desc {
+  display: flex;
+  gap: 5px;
+}
+
+.reserved {
+  padding: 3px;
+  margin-right: 3px;
+  width: fit-content;
+  background-color: #15b8d4;
+  border-radius: 3px;
+  font-size: 15px;
+  color: #fff;
+}
+
+.btn {
+  padding: 8px 15px;
+  background-color: #3177f8;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+}
+
+.btnReserved {
+  padding: 8px 15px;
+  background-color: #fff;
+  border: 1px solid #585858;
+  border-radius: 3px;
+  color: #585858;
+}
+
+.success-message {
+  color: greenyellow;
+}
+
+.mission-table {
+  width: 95%;
+  border-collapse: collapse;
+  margin: 30px auto;
+}
+
+.mission-table th,
+.mission-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.mission-table td {
+  width: 25%;
+}
+
+.mission-table td:nth-child(2) {
+  width: 50%;
+}
+
+.mission-table th {
+  text-align: center;
+  background-color: #fff !important;
+}
+
+.mission-table td:first-child {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  width: 15%;
+}
+
+tr:nth-child(odd) {
+  background-color: #eee;
+}
+
+.mission-table td:nth-child(3) {
+  width: 15%;
+}
+
+.btnm {
+  padding: 8px 10px;
+  background-color: inherit;
+}
+
+.failure__button {
+  color: red;
+  border-color: red;
+}
+
+.not__member {
+  text-transform: uppercase;
+  background-color: #999;
+  color: white;
+  font-size: 16px;
+}
+
+.active__member {
+  text-transform: capitalize;
+  color: #fff;
+  background-color: #18a2b8;
+}
+
+.active__member,
+.not__member {
+  border-radius: 5px;
+  padding: 4px;
+  display: inline-block;
+  font-weight: bold;
+}
+
+section {
+  width: 45%;
+}
+
+ul {
+  padding: 0;
+}
+
+.missionsList li {
+  border: 1px solid #4f5253;
+  border-bottom: none;
+  padding: 10px;
+}
+
+.navLinks li:nth-child(2) {
+  border-right: 2px solid black;
+}
+
+.missionsList li:last-child {
+  border-bottom: 1px solid #4f5253;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.missionsList li:first-child {
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+}
