@@ -37,7 +37,7 @@ Space Traverlers Hub is a web app that works with the real live data from the Sp
 <details>
   <summary>Server</summary>
   <ul>
-    <li><a href="https://render.com/">Render</a></li>
+    <li><a href="https://netlify.app/">Netlify</a></li>
   </ul>
 </details>
 
@@ -66,7 +66,7 @@ The My Profile section displays all reserved rockets and space mission.
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Space Traverlers Hub](https://space-travelers-hub-ghjo.onrender.com)
+- [Space Traverlers Hub](https://tangerine-youtiao-c19d69.netlify.app/)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

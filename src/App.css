@@ -6,13 +6,12 @@
 }
 
 a {
-  color: #3177f8;
-  font-size: 22px;
+  color: #1e87ff;
+  font-size: 21px;
 }
 
 a.active {
   text-decoration: underline;
-  color: #043fad;
 }
 
 nav {
@@ -173,7 +172,7 @@ tr:nth-child(odd) {
 .active__member {
   text-transform: capitalize;
   color: #fff;
-  background-color: #00b300;
+  background-color: #18a2b8;
 }
 
 .active__member,

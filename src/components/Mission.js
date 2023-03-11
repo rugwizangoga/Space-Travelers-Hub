@@ -1,32 +1,6 @@
 import PropTypes from 'prop-types';
-import { useDispatch } from 'react-redux';
+import Button from './Button';
 
-import { joinMission, leaveMission } from '../redux/missions/missionsSlice';
-
-const Button = ({ isJoined, missionId }) => {
-  const dispatch = useDispatch();
-
-  if (isJoined) {
-    return (
-      <button
-        className="btnm failure__button"
-        type="button"
-        onClick={() => dispatch(leaveMission(missionId))}
-      >
-        Leave Mission
-      </button>
-    );
-  }
-  return (
-    <button
-      className=" btnm success__button"
-      type="button"
-      onClick={() => dispatch(joinMission(missionId))}
-    >
-      Join Mission
-    </button>
-  );
-};
 const Mission = (props) => {
   const { mission } = props;
 
@@ -53,9 +27,4 @@ Mission.propTypes = {
     joined: PropTypes.bool,
   }).isRequired,
 };
-Button.propTypes = {
-  isJoined: PropTypes.bool.isRequired,
-  missionId: PropTypes.string.isRequired,
-};
-
 export default Mission;
