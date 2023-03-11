@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import './pages/css/Mission.css';
 import { useDispatch } from 'react-redux';
 
 import { joinMission, leaveMission } from '../redux/missions/missionsSlice';
