@@ -33,7 +33,7 @@ Space Traverlers Hub is a web app that works with the real live data from the Sp
 - CSS
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 - [React](https://reactjs.org/)
-- [Redux Toolkit] (https://redux-toolkit.js.org/)
+- [ReduxToolkit] (https://redux-toolkit.js.org/)
 <details>
   <summary>Server</summary>
   <ul>
